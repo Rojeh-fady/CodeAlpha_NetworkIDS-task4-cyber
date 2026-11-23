@@ -1,0 +1,43 @@
+2026-11-23 09:31:08,243 INFO NIDS started - mode: live (default iface) | response: DRY-RUN
+2026-11-23 09:31:30,582 WARNING [91m[09:31:30] HIGH     UDP Flood          192.168.1.9 -> 142.250.181.98 | 200 UDP packets in 5s | action: DRY-RUN: would block 192.168.1.9 for 300s[0m
+2026-11-23 09:32:16,033 WARNING [91m[09:32:16] HIGH     UDP Flood          192.168.1.9 -> 102.132.103.60 | 200 UDP packets in 5s | action: none[0m
+2026-11-23 09:33:13,640 WARNING [91m[09:33:13] HIGH     Command Injection  142.251.209.97 -> 192.168.1.9 | Signature 'Command Injection' matched in payload | action: DRY-RUN: would block 142.251.209.97 for 300s[0m
+2026-11-23 09:33:19,877 WARNING [91m[09:33:19] HIGH     UDP Flood          192.168.1.9 -> 142.251.156.119 | 200 UDP packets in 5s | action: none[0m
+2026-11-23 09:34:16,701 WARNING [91m[09:34:16] HIGH     UDP Flood          192.168.1.9 -> 142.250.181.138 | 200 UDP packets in 5s | action: none[0m
+2026-11-23 09:37:50,837 WARNING [91m[09:37:50] HIGH     UDP Flood          192.168.1.9 -> 142.251.208.131 | 200 UDP packets in 5s | action: none[0m
+2026-11-23 09:39:35,815 WARNING [91m[09:39:35] HIGH     UDP Flood          192.168.1.9 -> 160.79.104.10 | 200 UDP packets in 5s | action: none[0m
+2026-11-23 09:39:56,557 WARNING [91m[09:39:56] HIGH     UDP Flood          160.79.104.10 -> 192.168.1.9 | 200 UDP packets in 5s | action: DRY-RUN: would block 160.79.104.10 for 300s[0m
+2026-11-23 09:40:53,403 INFO NIDS started - mode: pcap sample_attacks.pcap | response: DRY-RUN
+2026-11-23 09:40:53,433 WARNING [91m[09:38:31] HIGH     Port Scan          10.0.0.66 -> 192.168.1.10 | SYN scan: 15 distinct ports in 10s | action: DRY-RUN: would block 10.0.0.66 for 300s[0m
+2026-11-23 09:40:53,445 WARNING [91m[09:38:33] HIGH     Port Scan          10.0.0.67 -> 192.168.1.10 | XMAS scan: 15 distinct ports in 10s | action: DRY-RUN: would block 10.0.0.67 for 300s[0m
+2026-11-23 09:40:53,463 WARNING [95m[09:38:34] CRITICAL SYN Flood          10.0.0.200 -> 192.168.1.10 | 100 SYN packets from 3 source(s) in 5s | action: DRY-RUN: would block 10.0.0.200 for 300s[0m
+2026-11-23 09:40:53,499 WARNING [91m[09:38:36] HIGH     ICMP Flood         10.0.0.77 -> 192.168.1.10 | 50 ICMP echo requests in 5s | action: DRY-RUN: would block 10.0.0.77 for 300s[0m
+2026-11-23 09:40:53,512 WARNING [91m[09:38:45] HIGH     SSH Brute Force    10.0.0.88 -> 192.168.1.10 | 8 connection attempts to SSH in 30s | action: DRY-RUN: would block 10.0.0.88 for 300s[0m
+2026-11-23 09:40:53,519 WARNING [91m[09:38:49] HIGH     SQL Injection      10.0.0.99 -> 192.168.1.10 | Signature 'SQL Injection' matched in payload | action: DRY-RUN: would block 10.0.0.99 for 300s[0m
+2026-11-23 09:40:53,524 WARNING [33m[09:38:49] MEDIUM   XSS Attempt        10.0.0.100 -> 192.168.1.10 | Signature 'XSS Attempt' matched in payload | action: none[0m
+2026-11-23 09:40:53,529 WARNING [91m[09:38:49] HIGH     Path Traversal     10.0.0.101 -> 192.168.1.10 | Signature 'Path Traversal' matched in payload | action: DRY-RUN: would block 10.0.0.101 for 300s[0m
+2026-11-23 09:40:53,534 WARNING [33m[09:38:49] MEDIUM   Scanner Tool User-Agent 10.0.0.102 -> 192.168.1.10 | Signature 'Scanner Tool User-Agent' matched in payload | action: none[0m
+2026-11-23 09:40:53,539 WARNING [95m[09:38:50] CRITICAL ARP Spoofing       192.168.1.1 -> 192.168.1.10 | 192.168.1.1 changed MAC aa:bb:cc:00:00:01 -> de:ad:be:ef:00:01 | action: none[0m
+2026-11-23 09:40:53,544 WARNING [91m[09:38:50] HIGH     Blacklisted IP     203.0.113.50 -> 192.168.1.10 | Traffic from blacklisted address 203.0.113.50 | action: DRY-RUN: would block 203.0.113.50 for 300s[0m
+2026-11-23 09:40:53,549 WARNING [33m[09:38:51] MEDIUM   Suspicious Port    10.0.0.120 -> 192.168.1.10 | Connection to commonly abused port 4444 | action: none[0m
+2026-11-23 09:40:53,594 WARNING [91m[09:38:52] HIGH     UDP Flood          10.0.0.130 -> 192.168.1.10 | 200 UDP packets in 5s | action: DRY-RUN: would block 10.0.0.130 for 300s[0m
+2026-11-23 09:40:53,605 INFO Stopped. packets=596 alerts=13 errors=0
+2026-11-23 09:46:44,271 INFO NIDS started - mode: pcap sample_attacks.pcap | response: DRY-RUN
+2026-11-23 09:46:44,286 WARNING [91m[09:38:31] HIGH     Port Scan          10.0.0.66 -> 192.168.1.10 | SYN scan: 15 distinct ports in 10s | action: DRY-RUN: would block 10.0.0.66 for 300s[0m
+2026-11-23 09:46:44,297 WARNING [91m[09:38:33] HIGH     Port Scan          10.0.0.67 -> 192.168.1.10 | XMAS scan: 15 distinct ports in 10s | action: DRY-RUN: would block 10.0.0.67 for 300s[0m
+2026-11-23 09:46:44,315 WARNING [95m[09:38:34] CRITICAL SYN Flood          10.0.0.200 -> 192.168.1.10 | 100 SYN packets from 3 source(s) in 5s | action: DRY-RUN: would block 10.0.0.200 for 300s[0m
+2026-11-23 09:46:44,347 WARNING [91m[09:38:36] HIGH     ICMP Flood         10.0.0.77 -> 192.168.1.10 | 50 ICMP echo requests in 5s | action: DRY-RUN: would block 10.0.0.77 for 300s[0m
+2026-11-23 09:46:44,361 WARNING [91m[09:38:45] HIGH     SSH Brute Force    10.0.0.88 -> 192.168.1.10 | 8 connection attempts to SSH in 30s | action: DRY-RUN: would block 10.0.0.88 for 300s[0m
+2026-11-23 09:46:44,367 WARNING [91m[09:38:49] HIGH     SQL Injection      10.0.0.99 -> 192.168.1.10 | Signature 'SQL Injection' matched in payload | action: DRY-RUN: would block 10.0.0.99 for 300s[0m
+2026-11-23 09:46:44,374 WARNING [33m[09:38:49] MEDIUM   XSS Attempt        10.0.0.100 -> 192.168.1.10 | Signature 'XSS Attempt' matched in payload | action: none[0m
+2026-11-23 09:46:44,378 WARNING [91m[09:38:49] HIGH     Path Traversal     10.0.0.101 -> 192.168.1.10 | Signature 'Path Traversal' matched in payload | action: DRY-RUN: would block 10.0.0.101 for 300s[0m
+2026-11-23 09:46:44,383 WARNING [33m[09:38:49] MEDIUM   Scanner Tool User-Agent 10.0.0.102 -> 192.168.1.10 | Signature 'Scanner Tool User-Agent' matched in payload | action: none[0m
+2026-11-23 09:46:44,388 WARNING [95m[09:38:50] CRITICAL ARP Spoofing       192.168.1.1 -> 192.168.1.10 | 192.168.1.1 changed MAC aa:bb:cc:00:00:01 -> de:ad:be:ef:00:01 | action: none[0m
+2026-11-23 09:46:44,393 WARNING [91m[09:38:50] HIGH     Blacklisted IP     203.0.113.50 -> 192.168.1.10 | Traffic from blacklisted address 203.0.113.50 | action: DRY-RUN: would block 203.0.113.50 for 300s[0m
+2026-11-23 09:46:44,398 WARNING [33m[09:38:51] MEDIUM   Suspicious Port    10.0.0.120 -> 192.168.1.10 | Connection to commonly abused port 4444 | action: none[0m
+2026-11-23 09:46:44,443 WARNING [91m[09:38:52] HIGH     UDP Flood          10.0.0.130 -> 192.168.1.10 | 200 UDP packets in 5s | action: DRY-RUN: would block 10.0.0.130 for 300s[0m
+2026-11-23 09:46:44,453 INFO Stopped. packets=596 alerts=13 errors=0
+2026-11-23 09:50:07,539 WARNING [91m[09:50:07] HIGH     UDP Flood          192.168.1.9 -> 142.250.181.106 | 200 UDP packets in 5s | action: none[0m
+2026-11-23 09:51:36,025 WARNING [33m[09:51:36] MEDIUM   XSS Attempt        219.94.128.194 -> 192.168.1.9 | Signature 'XSS Attempt' matched in payload | action: none[0m
+2026-11-23 09:52:24,321 WARNING [91m[09:52:24] HIGH     UDP Flood          45.240.2.33 -> 192.168.1.9 | 200 UDP packets in 5s | action: DRY-RUN: would block 45.240.2.33 for 300s[0m
+2026-11-23 09:52:58,474 WARNING [91m[09:52:58] HIGH     UDP Flood          192.168.1.9 -> 172.217.18.106 | 200 UDP packets in 5s | action: none[0m

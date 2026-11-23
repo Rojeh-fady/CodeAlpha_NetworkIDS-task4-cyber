@@ -1,0 +1,33 @@
+{
+  "alert_cooldown": 30,
+  "whitelist_ips": [],
+  "blacklist_ips": ["203.0.113.50"],
+  "suspicious_ports": [4444, 31337, 1337, 6667, 12345],
+  "thresholds": {
+    "port_scan":   {"ports": 15,   "window": 10},
+    "syn_flood":   {"packets": 100, "window": 5},
+    "icmp_flood":  {"packets": 50,  "window": 5},
+    "udp_flood":   {"packets": 200, "window": 5},
+    "brute_force": {"attempts": 8,  "window": 30}
+  },
+  "signatures": [
+    {"name": "SQL Injection", "severity": "high",
+     "pattern": "(union(\\s|%20|\\+)+select|'\\s*or\\s*'?1'?\\s*=\\s*'?1|;\\s*drop\\s+table|sleep\\(\\d+\\)|information_schema)"},
+    {"name": "XSS Attempt", "severity": "medium",
+     "pattern": "(<script[^>]*>|javascript:|onerror\\s*=)"},
+    {"name": "Path Traversal", "severity": "high",
+     "pattern": "((\\.\\./){2,}|%2e%2e%2f)"},
+    {"name": "Command Injection", "severity": "high",
+     "pattern": "(/bin/(ba)?sh|;\\s*(cat|wget|curl|nc)\\s+)"},
+    {"name": "Shellcode NOP Sled", "severity": "critical",
+     "pattern": "\\x90{20,}"},
+    {"name": "Scanner Tool User-Agent", "severity": "medium",
+     "pattern": "(sqlmap|nikto|masscan|nmap scripting engine)"}
+  ],
+  "response": {
+    "enabled": true,
+    "dry_run": true,
+    "block_seconds": 300,
+    "min_severity": "high"
+  }
+}
