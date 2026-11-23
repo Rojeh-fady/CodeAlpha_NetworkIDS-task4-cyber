@@ -1,0 +1,14 @@
+id,ts,rule,severity,src_ip,dst_ip,dst_port,proto,message,action,time
+13,1795419532.005518,UDP Flood,high,10.0.0.130,192.168.1.10,53.0,UDP,200 UDP packets in 5s,DRY-RUN: would block 10.0.0.130 for 300s,2026-11-23 07:38:52.005517960
+12,1795419531.005495,Suspicious Port,medium,10.0.0.120,192.168.1.10,4444.0,TCP,Connection to commonly abused port 4444,none,2026-11-23 07:38:51.005495071
+11,1795419530.955495,Blacklisted IP,high,203.0.113.50,192.168.1.10,,IP,Traffic from blacklisted address 203.0.113.50,DRY-RUN: would block 203.0.113.50 for 300s,2026-11-23 07:38:50.955495119
+10,1795419530.905495,ARP Spoofing,critical,192.168.1.1,192.168.1.10,,ARP,192.168.1.1 changed MAC aa:bb:cc:00:00:01 -> de:ad:be:ef:00:01,none,2026-11-23 07:38:50.905494928
+9,1795419529.905495,Scanner Tool User-Agent,medium,10.0.0.102,192.168.1.10,80.0,TCP,Signature 'Scanner Tool User-Agent' matched in payload,none,2026-11-23 07:38:49.905494928
+8,1795419529.705495,Path Traversal,high,10.0.0.101,192.168.1.10,80.0,TCP,Signature 'Path Traversal' matched in payload,DRY-RUN: would block 10.0.0.101 for 300s,2026-11-23 07:38:49.705495119
+7,1795419529.505495,XSS Attempt,medium,10.0.0.100,192.168.1.10,80.0,TCP,Signature 'XSS Attempt' matched in payload,none,2026-11-23 07:38:49.505495071
+6,1795419529.305495,SQL Injection,high,10.0.0.99,192.168.1.10,80.0,TCP,Signature 'SQL Injection' matched in payload,DRY-RUN: would block 10.0.0.99 for 300s,2026-11-23 07:38:49.305495024
+5,1795419525.105495,SSH Brute Force,high,10.0.0.88,192.168.1.10,22.0,TCP,8 connection attempts to SSH in 30s,DRY-RUN: would block 10.0.0.88 for 300s,2026-11-23 07:38:45.105494976
+4,1795419516.505496,ICMP Flood,high,10.0.0.77,192.168.1.10,,ICMP,50 ICMP echo requests in 5s,DRY-RUN: would block 10.0.0.77 for 300s,2026-11-23 07:38:36.505496025
+3,1795419514.595497,SYN Flood,critical,10.0.0.200,192.168.1.10,80.0,TCP,100 SYN packets from 3 source(s) in 5s,DRY-RUN: would block 10.0.0.200 for 300s,2026-11-23 07:38:34.595496893
+2,1795419513.505498,Port Scan,high,10.0.0.67,192.168.1.10,114.0,TCP,XMAS scan: 15 distinct ports in 10s,DRY-RUN: would block 10.0.0.67 for 300s,2026-11-23 07:38:33.505497932
+1,1795419511.5055,Port Scan,high,10.0.0.66,192.168.1.10,15.0,TCP,SYN scan: 15 distinct ports in 10s,DRY-RUN: would block 10.0.0.66 for 300s,2026-11-23 07:38:31.505500077
